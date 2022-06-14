@@ -1,58 +1,74 @@
 *{
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body{
-  font-family: 'montseratt', sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
+
 }
 
 .app{
-background-image: url('./assets/cold-bg.jpg');
-background-size: cover;
-background-position: bottom;
-transition: 0.4s case-out;
+  background-image:  url("./assets/cold-bg.jpg");
+  background-size:cover;
+  background-position: bottom;
+  height: 100%;
+  transition: 0.4 ease-out;
 }
+.warm{
+  background-image:url("./assets/warm-bg.jpg");
 
-.app.warm{
-  background-image: url('./assets/warm-bg.jpg')
 }
-
-main{
+ main{
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75));
-  padding: 25px;
-}
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.75));
 
+ }
 .search-box{
-  width: 100%;
-  margin: 0 0 75px;
-}
-
-.search-box .search-bar{
-  display: block;
-  width: 100%;
-  padding: 15px;
-
-  appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-
-  background-color: rgba(255,255,255, 0.5);
-  border-radius: 0px 0px 16px 16px;
-  margin-top: -25px;
-
-  box-shadow: 0px 5px rgba(0,0,0,0.2);
-
-  color: #313131;
-  font-size: 20px;
-
-  transition: 0.4s ease;
+  margin: 0 3% 10px;
 
 }
 
-.search-box .search-bar:focus{
-  background-color: rgba(255,255,255, 0.75);
+.search-bar{
+  width: 95%;
+  height: 2.5rem;
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(255, 255, 255, 0.74);
+  font-size: medium;
+  padding: 0 10px;
+  box-shadow: 2px 2px rgba(10, 10, 10, 0.404);
+}
+
+.output-box{
+  text-shadow: 3px 3px rgba(10, 10, 10, 0.404);
+  margin: 50px auto;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.output-box .location{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.output-box .date{
+  margin: 0.5rem;
+}
+
+.output-box .temp{
+  margin: 1rem auto;
+  width: fit-content;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.342);
+  font-size: 4rem;
+  border-radius: 1.5rem;
+  font-weight: 600;
+}
+
+.output-box .weather{
+  font-size: 2.5rem;
+  font-weight: 600;
+
 }

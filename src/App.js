@@ -57,7 +57,15 @@ function App() {
   console.log(process.env);
 
   return (
-    <div className="app">
+    <div
+      className={
+        typeof weather.main != "undefined"
+          ? weather.main.temp > 16
+            ? "app warm"
+            : "app"
+          : "app"
+      }
+    >
       <main>
         <div className="search-box">
           <input
@@ -70,7 +78,7 @@ function App() {
           />
         </div>
         {typeof weather.main != "undefined" ? (
-          <div>
+          <div className="output-box">
             <div className="location-box">
               <div className="location">
                 {weather.name}, {weather.sys.country}
